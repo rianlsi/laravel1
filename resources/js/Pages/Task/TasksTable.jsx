@@ -6,7 +6,7 @@ import { TASK_STATUS_CLASS_MAP, TASK_STATUS_TEXT_MAP } from "@/constants.jsx";
 import { Link, router } from "@inertiajs/react";
 
 export default function TasksTable({tasks, queryParams }) {
-
+    queryParams = queryParams || {};
     const searchFieldChanged = (name, value) => {
         if (value) {
             queryParams[name] = value
@@ -25,14 +25,14 @@ export default function TasksTable({tasks, queryParams }) {
 
     const sortChanged = (name) => {
         if (name === queryParams.sort_field) {
-            if (queryParams.sort_direction === 'asc') {
-                queryParams.sort_direction = 'desc';
-            } else {
-                queryParams.sort_direction = "asc";
-            }
+          if (queryParams.sort_direction === "asc") {
+            queryParams.sort_direction = "desc";
+          } else {
+            queryParams.sort_direction = "asc";
+          }
         } else {
-            queryParams.sort_field = name;
-            queryParams.sort_direction = 'asc';
+          queryParams.sort_field = name;
+          queryParams.sort_direction = "asc";
         }
         router.get(route('task.index'), queryParams);
     };

@@ -26,7 +26,7 @@ class TaskController extends Controller
             $query->where("status", request("status"));
         }
 
-        $projects = $query->orderBy($sortField, $sortDirection)
+        $tasks = $query->orderBy($sortField, $sortDirection)
             ->paginate(10)
             ->onEachSide(1);
 

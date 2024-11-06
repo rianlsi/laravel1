@@ -39,10 +39,11 @@ export default function Create({user}) {
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800">
                             <form onSubmit={onSubmit} className="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                                
                                 {/* Image Upload */}
                                 <div>
-                                    <InputLabel htmlFor="project_image_path" value="Project Image" />
-                                    <TextInput id="project_image_path" type="file" name="image" value={data.image} className="mt-1 block w-full" onChange={e => setData('image', e.target.value)} />
+                                    <InputLabel htmlFor="project_image_path" value="Project Image"/>
+                                    <TextInput id="project_image_path" type="file" name="image" className="mt-1 block w-full" onChange={(e) => setData("image", e.target.files[0])}/>
                                     <InputError message={errors.image} className="mt-2" />
                                 </div>
                                 {/* Project Name */}

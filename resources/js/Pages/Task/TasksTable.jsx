@@ -47,7 +47,7 @@ export default function TasksTable({tasks, queryParams = null, hideProjectColumn
                                     <tr className="text-nowrap">
                                         <TableHeading name="id" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>ID</TableHeading>
                                         <th className="px-3 py-3">Image</th>
-                                        {!hideProjectColumn && (<th className="px-3 py-3">Project Name</th>)}
+                                        {!hideProjectColumn && (<th className="px-3 py-3">task Name</th>)}
                                         <TableHeading name="name" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>Name</TableHeading>
                                         <TableHeading name="status" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>Status</TableHeading>
                                         <TableHeading name="created_at" sort_field={queryParams.sort_field} sort_direction={queryParams.sort_direction} sortChanged={sortChanged}>Created At</TableHeading>

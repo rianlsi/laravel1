@@ -86,16 +86,7 @@ export default function Create({user, projects, users}) {
                                     </SelectInput>
                                     <InputError message={errors.task_priority} className="mt-2" />
                                 </div>
-                                {/* Assigned User */}
-                                <div className="mt-4">
-                                    <InputLabel htmlFor="task_assigned_user" value="Task Assigned User" />
-                                    <SelectInput name="assigned_user" id="task_assigned_user" className="mt-1 block w-full" onChange={(e) => setData("assigned_user", e.target.value)} >
-                                        <option value="">Select Assigned User</option>
-                                        
-                                    </SelectInput>
-                                    <InputError message={errors.task_assigned_user} className="mt-2" />
-                                </div>
-                                {/* task priority */}
+                                {/* Assigned USer */}
                                 <div className="mt-4">
                                     <InputLabel htmlFor="task_assigned_user" value="Assigned User" />
                                     <SelectInput name="assigned_user_id" id="task_assigned_user" className="mt-1 block w-full" onChange={(e) => setData("assigned_user_id", e.target.value)}>
